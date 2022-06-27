@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index-page</title>
+</head>
+<body>
+
+<form method="post", action="/sellingAdd">
+
+    {% csrf_token %}
+
+    <div>
+        <div>
+            <label>Selling ID</label>
+        <div>
+            {{form.pid}}
+        </div>
+        </div>
+          <div>
+            <label>Selling Item Name</label>
+        <div>
+        {{form.ItemName}}
+        </div>
+        </div>
+          <div>
+            <label>Per Item Price</label>
+        <div>
+        {{form.perItemPrice}}
+        </div>
+        </div>
+          <div>
+            <label>Total Quantity</label>
+        <div>
+        {{form.totalQuantity}}
+        </div>
+        </div>
+        <button type="submit"> SUBMIT</button>
+
+    </div>
+</form>
+</body>
+</html>

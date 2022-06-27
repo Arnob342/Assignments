@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>Selling ID</th>
+        <th>Item Name</th>
+        <th>Per Item Price</th>
+        <th>Total Quantity</th>
+        <th>Total Price</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for selling in selling %}
+    <tr>
+         <td>{{selling.pid}}</td>
+         <td>{{selling.ItemName}}</td>
+         <td>{{selling.perItemPrice}}</td>
+         <td>{{selling.totalQuantity}}</td>
+         <td>{% widthratio selling.totalQuantity 1 selling.perItemPrice %}</td>
+        <td>
+            <a href="edit/{{selling.id}}"> Edit</a>
+            <a href="delete/{{selling.id}}"> Delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>
